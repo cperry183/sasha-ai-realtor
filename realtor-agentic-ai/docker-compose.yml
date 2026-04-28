@@ -1,7 +1,0 @@
-version: "3.9"
-services:
-  realtor-agentic-ai:
-    build: .
-    ports:
-      - "8000:8000"
-
