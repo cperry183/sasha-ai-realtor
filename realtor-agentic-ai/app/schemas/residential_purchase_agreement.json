@@ -1,0 +1,12 @@
+{
+  "name": "Residential Purchase Agreement",
+  "fields": [
+    {"name": "buyer_name", "prompt": "What is the buyer's full legal name?", "example": "Alex Morgan"},
+    {"name": "seller_name", "prompt": "What is the seller's full legal name?", "example": "Jordan Lee"},
+    {"name": "property_address", "prompt": "What is the property address?", "example": "100 Main St, Austin, TX 78701"},
+    {"name": "purchase_price", "prompt": "What is the purchase price?", "example": "$500,000"},
+    {"name": "earnest_money", "prompt": "How much earnest money is being deposited?", "example": "$10,000"},
+    {"name": "closing_date", "prompt": "What is the closing date?", "example": "2026-06-15"}
+  ]
+}
+

@@ -1,0 +1,11 @@
+{
+  "name": "Seller Disclosure",
+  "fields": [
+    {"name": "seller_name", "prompt": "Confirm the seller name for the disclosure."},
+    {"name": "property_address", "prompt": "Confirm the property address for the disclosure."},
+    {"name": "known_material_defects", "prompt": "List any known material defects.", "example": "No known defects"},
+    {"name": "roof_age", "prompt": "How old is the roof (years)?", "example": "8"},
+    {"name": "hvac_age", "prompt": "How old is the HVAC system (years)?", "example": "5"}
+  ]
+}
+

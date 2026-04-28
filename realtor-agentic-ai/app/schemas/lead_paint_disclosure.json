@@ -1,0 +1,10 @@
+{
+  "name": "Lead Paint Disclosure",
+  "fields": [
+    {"name": "property_address", "prompt": "Confirm property address for lead paint disclosure."},
+    {"name": "year_built", "prompt": "What year was the home built?", "example": "1978"},
+    {"name": "lead_paint_known", "prompt": "Does the seller have knowledge of lead-based paint? (yes/no)", "example": "no"},
+    {"name": "lead_paint_reports_available", "prompt": "Are lead paint reports available? (yes/no)", "example": "no"}
+  ]
+}
+
