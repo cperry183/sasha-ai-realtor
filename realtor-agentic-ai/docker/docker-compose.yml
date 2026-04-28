@@ -1,0 +1,41 @@
+version: '3.8'
+services:
+redis:
+image: redis:7-alpine
+ports:
+- "6379:6379"
+volumes:
+- redis_data:/data
+command: redis-server --appendonly yes
+
+postgres:
+image: postgres:15-alpine
+environment:
+POSTGRES_USER: realtor
+POSTGRES_PASSWORD: realtor123
+POSTGRES_DB: realtor_ai
+ports:
+- "5432:5432"
+volumes:
+- postgres_data:/var/lib/postgresql/data
+
+realtor-ai-agent:
+build:
+context: ..
+dockerfile: docker/Dockerfile
+ports:
+- "8000:8000"
+environment:
+OPENAI_API_KEY: ${OPENAI_API_KEY}
+REDIS_URL: redis://redis:6379
+DATABASE_URL: postgresql://realtor:realtor123@postgres:5432/realtor_ai
+depends_on:
+- redis
+- postgres
+volumes:
+- ./output:/app/output
+restart: unless-stopped
+
+volumes:
+redis_data:
+postgres_data:
